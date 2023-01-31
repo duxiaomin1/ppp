@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function Hero(uname, type, blood) {
+            this.name = uname;
+            this.type = type;
+            this.blood = blood;
+            this.attack = function(aru) {
+                console.log(aru);
+            }
+        }
+
+        var lianpo = new Hero('廉颇', '力量型', '500血量');
+        lianpo.attack('近战');
+        var houyi = new Hero('后羿', '射手型', '100血量');
+        houyi.attack('远程');
+
+
+        console.log(lianpo.name);
+        console.log(houyi['type']);
+
+
+        var obj = new Object();
+
+        obj.name = '得得得';
+        obj.sex = '男';
+        obj.attack = function() {
+            console.log('就会哈哈哈');
+        }
+        
+        console.log(obj.name);
+        obj.attack();
+
+
+
+        var obj1 = {
+            uname : '你猜',
+            sex : '女',
+            attack : function() {
+                console.log('太难了');
+            }
+
+        }
+
+        for (var k in obj1) {
+            console.log(k);
+            console.log(obj1[k]);
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
